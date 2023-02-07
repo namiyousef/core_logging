@@ -2,7 +2,10 @@ import logging
 import logging.config
 import os
 
-LOGGING_CONFIG = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'logging_configs/base.conf')
+LOGGING_CONFIG_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'logging_configs')
+LOGGING_CONFIG_BASE = os.path.join(LOGGING_CONFIG_DIR, 'base.conf')
+
+LOGGING_CONFIG_FASTAPI = os.path.join(LOGGING_CONFIG_DIR, 'fastapi.conf')
 
 
 # what is my goal? I want to create a logging library that allows me to:

@@ -1,11 +1,11 @@
 import logging
 import logging.config
 
-from core_logging.config import LOGGING_CONFIG
+from core_logging.config import LOGGING_CONFIG_BASE, LOGGING_CONFIG_FASTAPI
 
 class LoggingConfig:
     def __init__(self, logger_name, json_logger=False):
-        logging.config.fileConfig(LOGGING_CONFIG)
+        logging.config.fileConfig(LOGGING_CONFIG_BASE)
         
         if json_logger:
             logging_config = 'json'
